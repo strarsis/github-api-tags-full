@@ -1,0 +1,38 @@
+{
+  "devDependencies": {
+    "array-flatten": "^2.0.0",
+    "bluebird": "^3.0.6",
+    "object-assign": "^4.0.1",
+    "parse-links": "^0.1.0"
+  },
+  "name": "github-api-tags-full",
+  "version": "1.0.0",
+  "description": "Gets all tags with their respective commit for sorting from Github API",
+  "main": "index.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strarsis/github-api-tags-full.git"
+  },
+  "keywords": [
+    "github",
+    "api",
+    "github",
+    "api",
+    "tags",
+    "full",
+    "sort",
+    "order",
+    "commits",
+    "commit"
+  ],
+  "author": "strarsis <strarsis@gmail.com> (https://github.com/strarsis)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strarsis/github-api-tags-full/issues"
+  },
+  "homepage": "https://github.com/strarsis/github-api-tags-full#readme"
+}
