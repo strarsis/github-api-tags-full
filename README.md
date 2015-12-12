@@ -10,7 +10,7 @@ npm install github-api-tags-full github
 This module uses the github module for accessing the github API:
 ````
 var GitHubApi  = require('github'),
-    githubTags = require('./task');
+    githubTags = require('github-api-tags-full');
 
 var github = new GitHubApi({
   version: '3.0.0'
@@ -29,7 +29,7 @@ npm install github-api-tags-full github moment
 ````
 var GitHubApi  = require('github'),
     moment     = require('moment'),
-    githubTags = require('./task');
+    githubTags = require('github-api-tags-full');
 
 var github = new GitHubApi({
   version: '3.0.0'
