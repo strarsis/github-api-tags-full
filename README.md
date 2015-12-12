@@ -47,7 +47,7 @@ var github = new GitHubApi({
 
 githubTags({ user: 'golang', repo: 'go' }, github)
 .then(function(tags) {
-  var tagsSorted = tags.sort(byAuthorDateAsc).reverse(); // ascending
+  var tagsSorted = tags.sort(byAuthorDateAsc).reverse(); // descending
   console.log(tagsSorted);
 });
 
