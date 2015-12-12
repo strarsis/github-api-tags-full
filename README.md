@@ -17,7 +17,7 @@ Usage
 npm install github-api-tags-full github
 ````
 
-This module uses the github module for accessing the github API:
+This module uses the github module for accessing the Github API:
 ````
 var GitHubApi  = require('github'),
     githubTags = require('github-api-tags-full');
