@@ -4,7 +4,8 @@ Gets all tags with their respective commit for sorting from Github API
 API
 ---
 Note that this module has to make one Github API call per tag in order to retrieve the commit details.
-You may want to auth (see [github authentication](https://github.com/mikedeboer/node-github#authentication)) to use bigher API rate limits.
+
+You may want to auth (see [github authentication](https://github.com/mikedeboer/node-github#authentication)) for bigher API rate limits.
 
 Usage
 -----
