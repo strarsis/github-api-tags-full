@@ -24,7 +24,7 @@ githubTags({ user: 'golang', repo: 'go' }, github)
 
 The resulting list of tags with commit can then be used to sort, e.g. by date:
 ````
-npm install moment
+npm install github-api-tags-full github moment
 ````
 ````
 var GitHubApi  = require('github'),
