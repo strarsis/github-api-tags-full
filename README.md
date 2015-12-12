@@ -1,6 +1,10 @@
 # github-api-tags-full
 Gets all tags with their respective commit for sorting from Github API
 
+[![david](https://david-dm.org/strarsis/github-api-tags-full.svg)](https://david-dm.org/strarsis/github-api-tags-full)
+
+[![NPM](https://nodei.co/npm/github-api-tags-full.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/github-api-tags-full/)
+
 API
 ---
 Note that this module has to make one Github API call per tag in order to retrieve the commit details.
