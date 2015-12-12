@@ -43,9 +43,22 @@ githubTags = function(repoId, github) {
     return Promise
     .map(pageNos, function(pageNo) { // each page no
       return getTags(pageNo, repoId, github)
-      .map(function(tag) { // each tag
-         return getTagCommit(tag, repoId, github);
+      .map(function(tag) {
+        return getTagCommit(tag, repoId, github);
       });
+    })
+
+    .then(function(tagsCommits) {
+
+      // Also add the first tags
+      return Promise
+      .map(firstTags, function(tag) {
+        return getTagCommit(tag, repoId, github);
+      })
+      .then(function(firstTagsCommits) {
+        return tagsCommits.concat(firstTagsCommits);
+      });
+
     });
 
   })
