@@ -9,7 +9,7 @@ API
 ---
 Note that this module has to make one Github API call per tag in order to retrieve the commit details.
 
-You may want to authenticate to Github as user first (see [github authentication](https://github.com/mikedeboer/node-github#authentication)) for bigher API rate limits.
+You may want to authenticate to Github as user first (see [github authentication](https://github.com/mikedeboer/node-github#authentication)) for higher API rate limits.
 
 Usage
 -----
