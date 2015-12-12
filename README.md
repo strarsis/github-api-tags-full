@@ -47,4 +47,7 @@ var byAuthorDateAsc = function(tagA, tagB) {
     tagB.commit.author.date
   );
 };
+var githubCompareDates = function(dateStrA, dateStrB) {
+  return moment(dateStrA).diff(dateStrB);
+};
 ````
