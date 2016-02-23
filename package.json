@@ -3,7 +3,8 @@
     "array-flatten": "^2.0.0",
     "bluebird": "^3.0.6",
     "object-assign": "^4.0.1",
-    "parse-links": "^0.1.0"
+    "parse-links": "^0.1.0",
+    "progress": "^1.1.8"
   },
   "name": "github-api-tags-full",
   "version": "4.0.0",
