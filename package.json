@@ -7,7 +7,7 @@
     "progress": "^1.1.8"
   },
   "name": "github-api-tags-full",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Gets all tags with their respective commit for sorting from Github API",
   "main": "index.js",
   "devDependencies": {},
