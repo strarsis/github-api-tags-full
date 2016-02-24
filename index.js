@@ -69,6 +69,7 @@ GithubTags.prototype.fetch = function(repoId, github) {
         .then(function(tagCommit) {
           self.tagCommitsDone += 1;
           self.emit('tag-commit', tagCommit);
+          return tagCommit;
         });
       });
     })
