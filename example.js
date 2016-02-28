@@ -13,7 +13,8 @@ var github = new GitHubApi({
   version: '3.0.0'
 });
 
-var githubApiAuth = require('./config/github-api-auth.json');
+// var githubApiAuth = false;
+var githubApiAuth = require('../docker-golang-nightly/generate/config/github-api-auth.json');
 if(githubApiAuth) {
   github.authenticate(githubApiAuth);
 }
