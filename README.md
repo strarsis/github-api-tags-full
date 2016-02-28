@@ -19,14 +19,15 @@ npm install github-api-tags-full github
 
 This module uses the github module for accessing the Github API:
 ````
-var GitHubApi  = require('github'),
-    githubTags = require('github-api-tags-full');
+var GitHubApi     = require('github'),
+    GithubApiTags = require('github-api-tags-full');
 
 var github = new GitHubApi({
   version: '3.0.0'
 });
 
-githubTags({ user: 'golang', repo: 'go' }, github)
+var gat = new GithubApiTags();
+gat.fetch({ user: 'golang', repo: 'go' }, github)
 .then(function(tags) {
   console.log(tags);
 });
@@ -37,15 +38,16 @@ The resulting list of tags with commit can then be used to sort, e.g. by date:
 npm install github-api-tags-full github moment
 ````
 ````
-var GitHubApi  = require('github'),
-    moment     = require('moment'),
-    githubTags = require('github-api-tags-full');
+var GitHubApi     = require('github'),
+    GithubApiTags = require('github-api-tags-full'),
+    moment        = require('moment');
 
 var github = new GitHubApi({
   version: '3.0.0'
 });
 
-githubTags({ user: 'golang', repo: 'go' }, github)
+var gat = new GithubApiTags();
+gat.fetch({ user: 'golang', repo: 'go' }, github)
 .then(function(tags) {
   var tagsSorted = tags.sort(byAuthorDateAsc).reverse(); // descending
   console.log(tagsSorted);
@@ -61,3 +63,5 @@ var githubCompareDates = function(dateStrA, dateStrB) {
   return moment(dateStrA).diff(dateStrB);
 };
 ````
+
+A more comprehensive example with progress indicator and http replay can be found in example.js.
