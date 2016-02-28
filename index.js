@@ -9,7 +9,13 @@ var Promise      = require('bluebird'),
 var getTags = function(pageNo, repoId, github) {
   return github.repos.getTagsAsync(
     objectAssign(repoId, { per_page: 100, page: pageNo }) // max 100 per_page
-  );
+  )
+  .then(function(tags) {
+    return {
+      no:   pageNo,
+      tags: tags
+    };
+  });
 };
 
 var getTagCommit = function(tag, repoId, github) {
@@ -27,77 +33,63 @@ var getCommit = function(tag, repoId, github) {
 };
 
 var GithubTags  = function() {
-  this.self     = this;
   this.tagsAll        = 0;
   this.tagsDone       = 0;
   this.tagCommitsDone = 0;
+};
+
+var getLastPageNo = function(tagsMeta) {
+  var lastPageUrl = parseLinks(tagsMeta.link).last;
+  var lastPageNo  = url.parse(lastPageUrl, true).query.page;
+  return lastPageNo;
 };
 
 GithubTags.prototype.fetch = function(repoId, github) {
 
   Promise.promisifyAll(github.repos);
 
-  var self = this.self;
-
   // Current github API (v3) doesn't support sorting tags (e.g. by their creation date).
-  return getTags(1, repoId, github)
-  .then(function(firstTags) {
+  return getTags(1, repoId, github).bind(this)
+  .then(function(firstPage) {
 
-    self.tagsAll   += firstTags.length;
-    self.emit('page', 1);
+    var firstTags  = firstPage.tags;
+    this.tagsAll  += firstTags.length;
+    this.emit('page', 1);
 
-    var lastPageUrl = parseLinks(firstTags.meta.link).last;
-    var lastPageNo  = url.parse(lastPageUrl, true).query.page;
+    var lastPageNo = getLastPageNo(firstTags.meta);
 
-    var pageNos     = [];
-    for(var pageNo  = 2; pageNo <= lastPageNo; pageNo++) {
-      pageNos.push(pageNo);
+    var restPages  = [];
+    for(pageNo     = 2; pageNo <= lastPageNo; pageNo++) {
+      restPages.push(  getTags(pageNo, repoId, github)  );
     }
 
-    return Promise
-    .map(pageNos, function(pageNo) { // each page no
-      return getTags(pageNo, repoId, github)
-      .then(function(tags) {
-        self.tagsAll  += tags.length;
-        self.emit('page', pageNo);
-        return tags;
-      })
-      .map(function(tag) {
-        self.tagsDone += 1;
-        self.emit('tag', tag);
-        return getTagCommit(tag, repoId, github)
-        .then(function(tagCommit) {
-          self.tagCommitsDone += 1;
-          self.emit('tag-commit', tagCommit);
-          return tagCommit;
-        });
-      });
-    })
+    var allPages   = restPages;
+    allPages.push(Promise.resolve(firstPage));
 
-    .then(function(tagCommits) {
-      // Also add the tags from the 1st page
-      return Promise
-      .map(firstTags, function(tag) {
-        self.tagsDone += 1;
-        self.emit('tag', tag);
-        return getTagCommit(tag, repoId, github)
-        .then(function(tagCommit) {
-          self.tagCommitsDone += 1;
-          self.emit('tag-commit', tagCommit);
-          return tagCommit;
-        });
-      })
-      .then(function(firstTagCommits) {
-        return tagCommits.concat(firstTagCommits);
+    return Promise.each(allPages, function(page) {
+      var tags       =  page.tags;
+      this.tagsDone +=  tags.length;
+      this.emit('page', page.no);
+
+      return Promise.map(tags, function(tag) {
+        return getTagCommit(tag, repoId, github);
       });
 
-    });
+    }.bind(this))
+    .then(mergePagesTags);
 
-  })
-  .then(function(tags) {
-    return arrayFlatten.depth(tags, 2);
   });
 };
+
+var mergePagesTags = function(pages) {
+  var tags = [];
+  for(pageIndex in pages) {
+    var page = pages[ pageIndex ];
+    tags = tags.concat(page.tags);
+  }
+  return tags;
+};
+
 
 util.inherits(GithubTags, EventEmitter);
 
