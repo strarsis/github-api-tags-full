@@ -39,8 +39,8 @@ var GithubTags   = function() {
   this.pagesDone = 0;
 };
 
-var getLastPageNo = function(tagsMeta) {
-  var lastPageUrl = parseLinks(tagsMeta.link).last;
+var getLastPageNo = function(page) {
+  var lastPageUrl = parseLinks(page.tags.meta.link).last;
   var lastPageNo  = url.parse(lastPageUrl, true).query.page;
   return lastPageNo;
 };
@@ -52,12 +52,8 @@ GithubTags.prototype.fetch = function(repoId, github) {
   // Current github API (v3) doesn't support sorting tags (e.g. by their creation date).
   return getTags(1, repoId, github).bind(this)
   .then(function(firstPage) {
-    var firstTags  = firstPage.tags;
-
-    this.tagsAll  += firstTags.length;
-    var lastPageNo = getLastPageNo(firstTags.meta);
+    var lastPageNo = getLastPageNo(firstPage);
     this.pagesAll  = lastPageNo;
-    this.emit('page', 1);
 
     var restPages  = [];
     for(pageNo     = 2; pageNo <= lastPageNo; pageNo++) {
@@ -67,14 +63,14 @@ GithubTags.prototype.fetch = function(repoId, github) {
     var allPages   = restPages;
     allPages.push(Promise.resolve(firstPage));
 
-    return Promise.each(allPages, function(page) {
+    return Promise.map(allPages, function(page) {
       var tags        =  page.tags;
       this.tagsAll   +=  tags.length;
 
       this.pagesDone += 1;
       this.emit('page', page.no);
 
-      return Promise.map(tags, function(tag) {
+      return Promise.each(tags, function(tag) {
         return getTagWithCommit(tag, repoId, github)
         .then(function(tagWithCommit) {
           this.tagsDone += 1;
@@ -85,16 +81,11 @@ GithubTags.prototype.fetch = function(repoId, github) {
     }.bind(this))
 
   })
-  .then(mergePagesTags);
+  .then(cleanTagsArray);
 };
 
-var mergePagesTags = function(pages) {
-  var tags = [];
-  for(pageIndex in pages) {
-    var page = pages[ pageIndex ];
-    tags = tags.concat(page.tags);
-  }
-  return tags;
+var cleanTagsArray = function(arrTags) {
+  return arrayFlatten.depth(arrTags, 2);
 };
 
 
