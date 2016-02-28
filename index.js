@@ -18,9 +18,9 @@ var getTags = function(pageNo, repoId, github) {
   });
 };
 
-var getTagCommit = function(tag, repoId, github) {
+var getTagWithCommit = function(tag, repoId, github) {
   return getCommit(tag, repoId, github)
-  .then(function(commitDetails) {  // commit for tag
+  .then(function(commitDetails) {  // commit (details) for tag
     tag.commit = objectAssign(tag.commit, commitDetails.commit); // existing commit contains the sha+url
     return tag;
   });
@@ -32,10 +32,11 @@ var getCommit = function(tag, repoId, github) {
   );
 };
 
-var GithubTags  = function() {
-  this.tagsAll        = 0;
-  this.tagsDone       = 0;
-  this.tagCommitsDone = 0;
+var GithubTags   = function() {
+  this.tagsAll   = 0;
+  this.tagsDone  = 0;
+  this.pagesAll  = 0;
+  this.pagesDone = 0;
 };
 
 var getLastPageNo = function(tagsMeta) {
@@ -51,12 +52,12 @@ GithubTags.prototype.fetch = function(repoId, github) {
   // Current github API (v3) doesn't support sorting tags (e.g. by their creation date).
   return getTags(1, repoId, github).bind(this)
   .then(function(firstPage) {
-
     var firstTags  = firstPage.tags;
-    this.tagsAll  += firstTags.length;
-    this.emit('page', 1);
 
+    this.tagsAll  += firstTags.length;
     var lastPageNo = getLastPageNo(firstTags.meta);
+    this.pagesAll  = lastPageNo;
+    this.emit('page', 1);
 
     var restPages  = [];
     for(pageNo     = 2; pageNo <= lastPageNo; pageNo++) {
@@ -67,18 +68,24 @@ GithubTags.prototype.fetch = function(repoId, github) {
     allPages.push(Promise.resolve(firstPage));
 
     return Promise.each(allPages, function(page) {
-      var tags       =  page.tags;
-      this.tagsDone +=  tags.length;
+      var tags        =  page.tags;
+      this.tagsAll   +=  tags.length;
+
+      this.pagesDone += 1;
       this.emit('page', page.no);
 
       return Promise.map(tags, function(tag) {
-        return getTagCommit(tag, repoId, github);
-      });
+        return getTagWithCommit(tag, repoId, github)
+        .then(function(tagWithCommit) {
+          this.tagsDone += 1;
+          this.emit('tag', tagWithCommit);
+        }.bind(this));
+      }.bind(this));
 
     }.bind(this))
-    .then(mergePagesTags);
 
-  });
+  })
+  .then(mergePagesTags);
 };
 
 var mergePagesTags = function(pages) {
