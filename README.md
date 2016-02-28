@@ -18,7 +18,7 @@ npm install github-api-tags-full github
 ````
 
 This module uses the github module for accessing the Github API:
-````
+```javascript
 var GitHubApi     = require('github'),
     GithubApiTags = require('github-api-tags-full');
 
@@ -37,7 +37,7 @@ The resulting list of tags with commit can then be used to sort, e.g. by date:
 ````
 npm install github-api-tags-full github moment
 ````
-````
+```javascript
 var GitHubApi     = require('github'),
     GithubApiTags = require('github-api-tags-full'),
     moment        = require('moment');
