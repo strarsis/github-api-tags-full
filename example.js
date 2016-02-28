@@ -1,6 +1,5 @@
 var GitHubApi     = require('github'),
     GithubApiTags = require('./'),
-    path          = require('path'),
     ProgressBar   = require('progress'),
     moment        = require('moment');
 
@@ -13,7 +12,7 @@ var github = new GitHubApi({
   version: '3.0.0'
 });
 
-var githubApiAuth = require('./github-api-auth.json');
+var githubApiAuth = require('./config/github-api-auth.json');
 if(githubApiAuth) {
   github.authenticate(githubApiAuth);
 }
@@ -45,6 +44,7 @@ gat.fetch(repoId, github)
 .then(function(tags) {
   var tagsSortedDateDesc = tags.sort(byAuthorDateAsc).reverse();
 
-  console.log('Tags sorted:');
-  console.log(tagsSortedDateDesc);
+  console.log('Tags sorted.');
+  console.log('Latest tag: ');
+  console.log(tagsSortedDateDesc[0]);
 });
