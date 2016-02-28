@@ -1,0 +1,33 @@
+GET /repos/golang/go/commits/402d3590b54e4a0df9fb51ed14b2999e85ce0b76?access_token=token
+host: api.github.com
+accept: application/vnd.github.v3+json
+
+HTTP/1.1 200 OK
+server: GitHub.com
+date: Sun, 28 Feb 2016 20:39:20 GMT
+content-type: application/json; charset=utf-8
+content-length: 4114
+connection: close
+status: 200 OK
+x-ratelimit-limit: 5000
+x-ratelimit-remaining: 4788
+x-ratelimit-reset: 1456694697
+cache-control: private, max-age=60, s-maxage=60
+vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding
+etag: "ec23247f00d8afeb46ef304ce75f37e9"
+last-modified: Thu, 28 Nov 2013 21:32:31 GMT
+x-oauth-scopes: public_repo
+x-accepted-oauth-scopes: 
+x-github-media-type: github.v3; format=json
+access-control-allow-credentials: true
+access-control-expose-headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+access-control-allow-origin: *
+content-security-policy: default-src 'none'
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-content-type-options: nosniff
+x-frame-options: deny
+x-xss-protection: 1; mode=block
+x-served-by: 7f48e2f7761567e923121f17538d7a6d
+x-github-request-id: 4E320659:3F87:154458E:56D35AF8
+
+{"sha":"402d3590b54e4a0df9fb51ed14b2999e85ce0b76","commit":{"author":{"name":"Andrew Gerrand","email":"adg@golang.org","date":"2013-11-28T21:32:31Z"},"committer":{"name":"Andrew Gerrand","email":"adg@golang.org","date":"2013-11-28T21:32:31Z"},"message":"go1.2\n\nR=golang-dev\nCC=golang-dev\nhttps://golang.org/cl/34820044","tree":{"sha":"edda624ee787e9cb3f4383d5002eb63fbdfb0fd7","url":"https://api.github.com/repos/golang/go/git/trees/edda624ee787e9cb3f4383d5002eb63fbdfb0fd7"},"url":"https://api.github.com/repos/golang/go/git/commits/402d3590b54e4a0df9fb51ed14b2999e85ce0b76","comment_count":0},"url":"https://api.github.com/repos/golang/go/commits/402d3590b54e4a0df9fb51ed14b2999e85ce0b76","html_url":"https://github.com/golang/go/commit/402d3590b54e4a0df9fb51ed14b2999e85ce0b76","comments_url":"https://api.github.com/repos/golang/go/commits/402d3590b54e4a0df9fb51ed14b2999e85ce0b76/comments","author":{"login":"adg","id":8446613,"avatar_url":"https://avatars.githubusercontent.com/u/8446613?v=3","gravatar_id":"","url":"https://api.github.com/users/adg","html_url":"https://github.com/adg","followers_url":"https://api.github.com/users/adg/followers","following_url":"https://api.github.com/users/adg/following{/other_user}","gists_url":"https://api.github.com/users/adg/gists{/gist_id}","starred_url":"https://api.github.com/users/adg/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/adg/subscriptions","organizations_url":"https://api.github.com/users/adg/orgs","repos_url":"https://api.github.com/users/adg/repos","events_url":"https://api.github.com/users/adg/events{/privacy}","received_events_url":"https://api.github.com/users/adg/received_events","type":"User","site_admin":false},"committer":{"login":"adg","id":8446613,"avatar_url":"https://avatars.githubusercontent.com/u/8446613?v=3","gravatar_id":"","url":"https://api.github.com/users/adg","html_url":"https://github.com/adg","followers_url":"https://api.github.com/users/adg/followers","following_url":"https://api.github.com/users/adg/following{/other_user}","gists_url":"https://api.github.com/users/adg/gists{/gist_id}","starred_url":"https://api.github.com/users/adg/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/adg/subscriptions","organizations_url":"https://api.github.com/users/adg/orgs","repos_url":"https://api.github.com/users/adg/repos","events_url":"https://api.github.com/users/adg/events{/privacy}","received_events_url":"https://api.github.com/users/adg/received_events","type":"User","site_admin":false},"parents":[{"sha":"b27c7bd7efecc2455f94430cbf43afebf25d4c60","url":"https://api.github.com/repos/golang/go/commits/b27c7bd7efecc2455f94430cbf43afebf25d4c60","html_url":"https://github.com/golang/go/commit/b27c7bd7efecc2455f94430cbf43afebf25d4c60"}],"stats":{"total":3,"additions":1,"deletions":2},"files":[{"sha":"539ae5b507a3ce14baa6d4d74c3cdffcdecf43f0","filename":".hgtags","status":"modified","additions":0,"deletions":1,"changes":1,"blob_url":"https://github.com/golang/go/blob/402d3590b54e4a0df9fb51ed14b2999e85ce0b76/.hgtags","raw_url":"https://github.com/golang/go/raw/402d3590b54e4a0df9fb51ed14b2999e85ce0b76/.hgtags","contents_url":"https://api.github.com/repos/golang/go/contents/.hgtags?ref=402d3590b54e4a0df9fb51ed14b2999e85ce0b76","patch":"@@ -119,4 +119,3 @@ dc5e410f0b4c32ab11dc992593a2bcf5f607381b weekly\n e570c2daeaca10663d36d6dee7f8d1d76e8f7b92 go1.1\n a7bd9a33067b3537351276e0178a045748ad046a go1.1.1\n 414057ac1f1fc850957088e4c5e95cdbccd2d594 go1.1.2\n-414057ac1f1fc850957088e4c5e95cdbccd2d594 release"},{"sha":"7e7b355f740a7b76e64151817b2a611a333324e0","filename":"VERSION","status":"modified","additions":1,"deletions":1,"changes":2,"blob_url":"https://github.com/golang/go/blob/402d3590b54e4a0df9fb51ed14b2999e85ce0b76/VERSION","raw_url":"https://github.com/golang/go/raw/402d3590b54e4a0df9fb51ed14b2999e85ce0b76/VERSION","contents_url":"https://api.github.com/repos/golang/go/contents/VERSION?ref=402d3590b54e4a0df9fb51ed14b2999e85ce0b76","patch":"@@ -1 +1 @@\n-go1.2rc5\n\\ No newline at end of file\n+go1.2\n\\ No newline at end of file"}]}

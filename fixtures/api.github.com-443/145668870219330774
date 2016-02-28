@@ -1,0 +1,33 @@
+GET /repos/golang/go/commits/d3ffc975f38890abbd8ca3f7833772e6423297e8?access_token=token
+host: api.github.com
+accept: application/vnd.github.v3+json
+
+HTTP/1.1 200 OK
+server: GitHub.com
+date: Sun, 28 Feb 2016 20:37:48 GMT
+content-type: application/json; charset=utf-8
+content-length: 5070
+connection: close
+status: 200 OK
+x-ratelimit-limit: 5000
+x-ratelimit-remaining: 4829
+x-ratelimit-reset: 1456694697
+cache-control: private, max-age=60, s-maxage=60
+vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding
+etag: "c35bb05bfd4f7925e3bcb3c5ec4bc287"
+last-modified: Wed, 29 Jul 2015 23:50:20 GMT
+x-oauth-scopes: public_repo
+x-accepted-oauth-scopes: 
+x-github-media-type: github.v3; format=json
+access-control-allow-credentials: true
+access-control-expose-headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+access-control-allow-origin: *
+content-security-policy: default-src 'none'
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-content-type-options: nosniff
+x-frame-options: deny
+x-xss-protection: 1; mode=block
+x-served-by: dc1ce2bfb41810a06c705e83b388572d
+x-github-request-id: 4E320659:99A9:2214895:56D35A99
+
+{"sha":"d3ffc975f38890abbd8ca3f7833772e6423297e8","commit":{"author":{"name":"Russ Cox","email":"rsc@golang.org","date":"2015-07-29T23:04:35Z"},"committer":{"name":"Andrew Gerrand","email":"adg@golang.org","date":"2015-07-29T23:50:20Z"},"message":"runtime: set invalidptr=1 by default, as documented\n\nAlso make invalidptr control the recently added GC pointer check,\nas documented.\n\nChange-Id: Iccfdf49480219d12be8b33b8f03d8312d8ceabed\nReviewed-on: https://go-review.googlesource.com/12857\nRun-TryBot: Russ Cox <rsc@golang.org>\nReviewed-by: Rob Pike <r@golang.org>","tree":{"sha":"9f999feed4d22eb79973d23b1760da5d241fc2ab","url":"https://api.github.com/repos/golang/go/git/trees/9f999feed4d22eb79973d23b1760da5d241fc2ab"},"url":"https://api.github.com/repos/golang/go/git/commits/d3ffc975f38890abbd8ca3f7833772e6423297e8","comment_count":0},"url":"https://api.github.com/repos/golang/go/commits/d3ffc975f38890abbd8ca3f7833772e6423297e8","html_url":"https://github.com/golang/go/commit/d3ffc975f38890abbd8ca3f7833772e6423297e8","comments_url":"https://api.github.com/repos/golang/go/commits/d3ffc975f38890abbd8ca3f7833772e6423297e8/comments","author":{"login":"rsc","id":104030,"avatar_url":"https://avatars.githubusercontent.com/u/104030?v=3","gravatar_id":"","url":"https://api.github.com/users/rsc","html_url":"https://github.com/rsc","followers_url":"https://api.github.com/users/rsc/followers","following_url":"https://api.github.com/users/rsc/following{/other_user}","gists_url":"https://api.github.com/users/rsc/gists{/gist_id}","starred_url":"https://api.github.com/users/rsc/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rsc/subscriptions","organizations_url":"https://api.github.com/users/rsc/orgs","repos_url":"https://api.github.com/users/rsc/repos","events_url":"https://api.github.com/users/rsc/events{/privacy}","received_events_url":"https://api.github.com/users/rsc/received_events","type":"User","site_admin":false},"committer":{"login":"adg","id":8446613,"avatar_url":"https://avatars.githubusercontent.com/u/8446613?v=3","gravatar_id":"","url":"https://api.github.com/users/adg","html_url":"https://github.com/adg","followers_url":"https://api.github.com/users/adg/followers","following_url":"https://api.github.com/users/adg/following{/other_user}","gists_url":"https://api.github.com/users/adg/gists{/gist_id}","starred_url":"https://api.github.com/users/adg/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/adg/subscriptions","organizations_url":"https://api.github.com/users/adg/orgs","repos_url":"https://api.github.com/users/adg/repos","events_url":"https://api.github.com/users/adg/events{/privacy}","received_events_url":"https://api.github.com/users/adg/received_events","type":"User","site_admin":false},"parents":[{"sha":"e4bd8e04087ac9e7c8b754df2d01ff7dddb13ba6","url":"https://api.github.com/repos/golang/go/commits/e4bd8e04087ac9e7c8b754df2d01ff7dddb13ba6","html_url":"https://github.com/golang/go/commit/e4bd8e04087ac9e7c8b754df2d01ff7dddb13ba6"}],"stats":{"total":7,"additions":4,"deletions":3},"files":[{"sha":"c439158f078080f50d43685838cd24e6df01677d","filename":"src/runtime/mbitmap.go","status":"modified","additions":1,"deletions":1,"changes":2,"blob_url":"https://github.com/golang/go/blob/d3ffc975f38890abbd8ca3f7833772e6423297e8/src/runtime/mbitmap.go","raw_url":"https://github.com/golang/go/raw/d3ffc975f38890abbd8ca3f7833772e6423297e8/src/runtime/mbitmap.go","contents_url":"https://api.github.com/repos/golang/go/contents/src/runtime/mbitmap.go?ref=d3ffc975f38890abbd8ca3f7833772e6423297e8","patch":"@@ -201,7 +201,7 @@ func heapBitsForObject(p uintptr) (base uintptr, hbits heapBits, s *mspan) {\n \t\t// The following ensures that we are rigorous about what data\n \t\t// structures hold valid pointers.\n \t\t// TODO(rsc): Check if this still happens.\n-\t\tif true {\n+\t\tif debug.invalidptr != 0 {\n \t\t\t// Still happens sometimes. We don't know why.\n \t\t\tprintlock()\n \t\t\tprint(\"runtime:objectstart Span weird: p=\", hex(p), \" k=\", hex(k))"},{"sha":"a50e5b618cfae4c7c19963e9eba3ed3af47e76d7","filename":"src/runtime/runtime1.go","status":"modified","additions":3,"deletions":2,"changes":5,"blob_url":"https://github.com/golang/go/blob/d3ffc975f38890abbd8ca3f7833772e6423297e8/src/runtime/runtime1.go","raw_url":"https://github.com/golang/go/raw/d3ffc975f38890abbd8ca3f7833772e6423297e8/src/runtime/runtime1.go","contents_url":"https://api.github.com/repos/golang/go/contents/src/runtime/runtime1.go?ref=d3ffc975f38890abbd8ca3f7833772e6423297e8","patch":"@@ -299,8 +299,6 @@ type dbgVar struct {\n \tvalue *int32\n }\n \n-// TODO(rsc): Make GC respect debug.invalidptr.\n-\n // Holds variables parsed from GODEBUG env var,\n // except for \"memprofilerate\" since there is an\n // existing int var for that value, which may\n@@ -340,6 +338,9 @@ var dbgvars = []dbgVar{\n }\n \n func parsedebugvars() {\n+\t// defaults\n+\tdebug.invalidptr = 1\n+\n \tfor p := gogetenv(\"GODEBUG\"); p != \"\"; {\n \t\tfield := \"\"\n \t\ti := index(p, \",\")"}]}

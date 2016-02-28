@@ -1,0 +1,33 @@
+GET /repos/golang/go/commits/cb6c6570b73a1c4d19cad94570ed277f7dae55ac?access_token=token
+host: api.github.com
+accept: application/vnd.github.v3+json
+
+HTTP/1.1 200 OK
+server: GitHub.com
+date: Sun, 28 Feb 2016 20:39:48 GMT
+content-type: application/json; charset=utf-8
+content-length: 4219
+connection: close
+status: 200 OK
+x-ratelimit-limit: 5000
+x-ratelimit-remaining: 4767
+x-ratelimit-reset: 1456694697
+cache-control: private, max-age=60, s-maxage=60
+vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding
+etag: "fb26c6ae2dc8e071c65991c463caeb52"
+last-modified: Thu, 14 Jun 2012 02:50:42 GMT
+x-oauth-scopes: public_repo
+x-accepted-oauth-scopes: 
+x-github-media-type: github.v3; format=json
+access-control-allow-credentials: true
+access-control-expose-headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+access-control-allow-origin: *
+content-security-policy: default-src 'none'
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-content-type-options: nosniff
+x-frame-options: deny
+x-xss-protection: 1; mode=block
+x-served-by: 13d09b732ebe76f892093130dc088652
+x-github-request-id: 4E320659:3F83:96B83C:56D35B14
+
+{"sha":"cb6c6570b73a1c4d19cad94570ed277f7dae55ac","commit":{"author":{"name":"Andrew Gerrand","email":"adg@golang.org","date":"2012-06-14T02:50:42Z"},"committer":{"name":"Andrew Gerrand","email":"adg@golang.org","date":"2012-06-14T02:50:42Z"},"message":"[release-branch.go1] syscall: fix windows build\n\n««« CL 6303061 / 17432a753e50\nsyscall: fix windows build\n\nTBR=bradfitz\nCC=golang-dev\nhttps://golang.org/cl/6303061\n»»»\n\nR=golang-dev\nCC=golang-dev\nhttps://golang.org/cl/6295080","tree":{"sha":"0d67138cd77001935b480c5b116eb2bf4cec3c51","url":"https://api.github.com/repos/golang/go/git/trees/0d67138cd77001935b480c5b116eb2bf4cec3c51"},"url":"https://api.github.com/repos/golang/go/git/commits/cb6c6570b73a1c4d19cad94570ed277f7dae55ac","comment_count":0},"url":"https://api.github.com/repos/golang/go/commits/cb6c6570b73a1c4d19cad94570ed277f7dae55ac","html_url":"https://github.com/golang/go/commit/cb6c6570b73a1c4d19cad94570ed277f7dae55ac","comments_url":"https://api.github.com/repos/golang/go/commits/cb6c6570b73a1c4d19cad94570ed277f7dae55ac/comments","author":{"login":"adg","id":8446613,"avatar_url":"https://avatars.githubusercontent.com/u/8446613?v=3","gravatar_id":"","url":"https://api.github.com/users/adg","html_url":"https://github.com/adg","followers_url":"https://api.github.com/users/adg/followers","following_url":"https://api.github.com/users/adg/following{/other_user}","gists_url":"https://api.github.com/users/adg/gists{/gist_id}","starred_url":"https://api.github.com/users/adg/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/adg/subscriptions","organizations_url":"https://api.github.com/users/adg/orgs","repos_url":"https://api.github.com/users/adg/repos","events_url":"https://api.github.com/users/adg/events{/privacy}","received_events_url":"https://api.github.com/users/adg/received_events","type":"User","site_admin":false},"committer":{"login":"adg","id":8446613,"avatar_url":"https://avatars.githubusercontent.com/u/8446613?v=3","gravatar_id":"","url":"https://api.github.com/users/adg","html_url":"https://github.com/adg","followers_url":"https://api.github.com/users/adg/followers","following_url":"https://api.github.com/users/adg/following{/other_user}","gists_url":"https://api.github.com/users/adg/gists{/gist_id}","starred_url":"https://api.github.com/users/adg/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/adg/subscriptions","organizations_url":"https://api.github.com/users/adg/orgs","repos_url":"https://api.github.com/users/adg/repos","events_url":"https://api.github.com/users/adg/events{/privacy}","received_events_url":"https://api.github.com/users/adg/received_events","type":"User","site_admin":false},"parents":[{"sha":"d0eabe2bbfb29bacb941bdc030dce4c6a33406bd","url":"https://api.github.com/repos/golang/go/commits/d0eabe2bbfb29bacb941bdc030dce4c6a33406bd","html_url":"https://github.com/golang/go/commit/d0eabe2bbfb29bacb941bdc030dce4c6a33406bd"}],"stats":{"total":4,"additions":2,"deletions":2},"files":[{"sha":"79cd8f86916c4ff0bcf60b78608350f36f357b00","filename":"src/pkg/syscall/syscall_windows_test.go","status":"modified","additions":2,"deletions":2,"changes":4,"blob_url":"https://github.com/golang/go/blob/cb6c6570b73a1c4d19cad94570ed277f7dae55ac/src/pkg/syscall/syscall_windows_test.go","raw_url":"https://github.com/golang/go/raw/cb6c6570b73a1c4d19cad94570ed277f7dae55ac/src/pkg/syscall/syscall_windows_test.go","contents_url":"https://api.github.com/repos/golang/go/contents/src/pkg/syscall/syscall_windows_test.go?ref=cb6c6570b73a1c4d19cad94570ed277f7dae55ac","patch":"@@ -27,7 +27,7 @@ func TestWin32finddata(t *testing.T) {\n \tf.Close()\n \n \ttype X struct {\n-\t\tfd  syscall.Win32finddata1\n+\t\tfd  syscall.Win32finddata\n \t\tgot byte\n \t\tpad [10]byte // to protect ourselves\n \n@@ -35,7 +35,7 @@ func TestWin32finddata(t *testing.T) {\n \tvar want byte = 2 // it is unlikely to have this character in the filename\n \tx := X{got: want}\n \n-\th, err := syscall.FindFirstFile1(syscall.StringToUTF16Ptr(path), &(x.fd))\n+\th, err := syscall.FindFirstFile(syscall.StringToUTF16Ptr(path), &(x.fd))\n \tif err != nil {\n \t\tt.Fatalf(\"FindFirstFile failed: %v\", err)\n \t}"}]}

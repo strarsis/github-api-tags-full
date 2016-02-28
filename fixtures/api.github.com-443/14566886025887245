@@ -1,0 +1,33 @@
+GET /repos/golang/go/commits/7998d012b9823d6938dbaac929a839776b093fe4?access_token=token
+host: api.github.com
+accept: application/vnd.github.v3+json
+
+HTTP/1.1 200 OK
+server: GitHub.com
+date: Sun, 28 Feb 2016 20:36:11 GMT
+content-type: application/json; charset=utf-8
+content-length: 3612
+connection: close
+status: 200 OK
+x-ratelimit-limit: 5000
+x-ratelimit-remaining: 4856
+x-ratelimit-reset: 1456694697
+cache-control: private, max-age=60, s-maxage=60
+vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding
+etag: "e5f94ef5df41143714388073cd8bb00c"
+last-modified: Thu, 16 Jun 2011 06:04:56 GMT
+x-oauth-scopes: public_repo
+x-accepted-oauth-scopes: 
+x-github-media-type: github.v3; format=json
+access-control-allow-credentials: true
+access-control-expose-headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+access-control-allow-origin: *
+content-security-policy: default-src 'none'
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-content-type-options: nosniff
+x-frame-options: deny
+x-xss-protection: 1; mode=block
+x-served-by: 8dd185e423974a7e13abbbe6e060031e
+x-github-request-id: 4E320659:6DAF:3CFADE2:56D35A3B
+
+{"sha":"7998d012b9823d6938dbaac929a839776b093fe4","commit":{"author":{"name":"Russ Cox","email":"rsc@golang.org","date":"2011-06-16T06:04:56Z"},"committer":{"name":"Russ Cox","email":"rsc@golang.org","date":"2011-06-16T06:04:56Z"},"message":"[release-branch.r57] docs/GoCourseDay1.pdf: fix error in operator table.\n\n««« CL 4637041 / df607ef238c9\ndocs/GoCourseDay1.pdf: fix error in operator table.\nCommunications op was listed as a binary; it isn't any more.\n\nR=golang-dev, rsc\nCC=golang-dev\nhttps://golang.org/cl/4637041\n»»»\n\nR=r\nCC=golang-dev\nhttps://golang.org/cl/4634042","tree":{"sha":"ca5aa3ddf9507972f8ba6c397501804f05632044","url":"https://api.github.com/repos/golang/go/git/trees/ca5aa3ddf9507972f8ba6c397501804f05632044"},"url":"https://api.github.com/repos/golang/go/git/commits/7998d012b9823d6938dbaac929a839776b093fe4","comment_count":0},"url":"https://api.github.com/repos/golang/go/commits/7998d012b9823d6938dbaac929a839776b093fe4","html_url":"https://github.com/golang/go/commit/7998d012b9823d6938dbaac929a839776b093fe4","comments_url":"https://api.github.com/repos/golang/go/commits/7998d012b9823d6938dbaac929a839776b093fe4/comments","author":{"login":"rsc","id":104030,"avatar_url":"https://avatars.githubusercontent.com/u/104030?v=3","gravatar_id":"","url":"https://api.github.com/users/rsc","html_url":"https://github.com/rsc","followers_url":"https://api.github.com/users/rsc/followers","following_url":"https://api.github.com/users/rsc/following{/other_user}","gists_url":"https://api.github.com/users/rsc/gists{/gist_id}","starred_url":"https://api.github.com/users/rsc/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rsc/subscriptions","organizations_url":"https://api.github.com/users/rsc/orgs","repos_url":"https://api.github.com/users/rsc/repos","events_url":"https://api.github.com/users/rsc/events{/privacy}","received_events_url":"https://api.github.com/users/rsc/received_events","type":"User","site_admin":false},"committer":{"login":"rsc","id":104030,"avatar_url":"https://avatars.githubusercontent.com/u/104030?v=3","gravatar_id":"","url":"https://api.github.com/users/rsc","html_url":"https://github.com/rsc","followers_url":"https://api.github.com/users/rsc/followers","following_url":"https://api.github.com/users/rsc/following{/other_user}","gists_url":"https://api.github.com/users/rsc/gists{/gist_id}","starred_url":"https://api.github.com/users/rsc/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rsc/subscriptions","organizations_url":"https://api.github.com/users/rsc/orgs","repos_url":"https://api.github.com/users/rsc/repos","events_url":"https://api.github.com/users/rsc/events{/privacy}","received_events_url":"https://api.github.com/users/rsc/received_events","type":"User","site_admin":false},"parents":[{"sha":"891ffb6aea29ef508d420e28fc87970e6c693fa3","url":"https://api.github.com/repos/golang/go/commits/891ffb6aea29ef508d420e28fc87970e6c693fa3","html_url":"https://github.com/golang/go/commit/891ffb6aea29ef508d420e28fc87970e6c693fa3"}],"stats":{"total":0,"additions":0,"deletions":0},"files":[{"sha":"c2c8c4a7dc954828f99d324a4aa9dc98ce19837e","filename":"doc/GoCourseDay1.pdf","status":"modified","additions":0,"deletions":0,"changes":0,"blob_url":"https://github.com/golang/go/blob/7998d012b9823d6938dbaac929a839776b093fe4/doc/GoCourseDay1.pdf","raw_url":"https://github.com/golang/go/raw/7998d012b9823d6938dbaac929a839776b093fe4/doc/GoCourseDay1.pdf","contents_url":"https://api.github.com/repos/golang/go/contents/doc/GoCourseDay1.pdf?ref=7998d012b9823d6938dbaac929a839776b093fe4"}]}

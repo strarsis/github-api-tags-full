@@ -1,0 +1,33 @@
+GET /repos/golang/go/commits/c57054f7b49539ca4ed6533267c1c20c39aaaaa5?access_token=token
+host: api.github.com
+accept: application/vnd.github.v3+json
+
+HTTP/1.1 200 OK
+server: GitHub.com
+date: Sun, 28 Feb 2016 20:42:27 GMT
+content-type: application/json; charset=utf-8
+content-length: 3898
+connection: close
+status: 200 OK
+x-ratelimit-limit: 5000
+x-ratelimit-remaining: 4723
+x-ratelimit-reset: 1456694697
+cache-control: private, max-age=60, s-maxage=60
+vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding
+etag: "7ac3196b0cec41c394d8a6f1ea7942ab"
+last-modified: Wed, 11 Nov 2009 04:05:24 GMT
+x-oauth-scopes: public_repo
+x-accepted-oauth-scopes: 
+x-github-media-type: github.v3; format=json
+access-control-allow-credentials: true
+access-control-expose-headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+access-control-allow-origin: *
+content-security-policy: default-src 'none'
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-content-type-options: nosniff
+x-frame-options: deny
+x-xss-protection: 1; mode=block
+x-served-by: a51acaae89a7607fd7ee967627be18e4
+x-github-request-id: 4E320659:4B26:12C53A1:56D35BB2
+
+{"sha":"c57054f7b49539ca4ed6533267c1c20c39aaaaa5","commit":{"author":{"name":"Kevin Ballard","email":"kevin@sb.org","date":"2009-11-11T04:05:24Z"},"committer":{"name":"Russ Cox","email":"rsc@golang.org","date":"2009-11-11T04:05:24Z"},"message":"Implement new emacs command M-x gofmt\n\nDefine a new interactive function in go-mode.el called gofmt.\nThis function passes the current buffer through the external `gofmt`\ntool and replaces the buffer with the result.\n\nR=agl, rsc\nhttps://golang.org/cl/154044","tree":{"sha":"b68305599abee671f80890777d0bbf1163ed5921","url":"https://api.github.com/repos/golang/go/git/trees/b68305599abee671f80890777d0bbf1163ed5921"},"url":"https://api.github.com/repos/golang/go/git/commits/c57054f7b49539ca4ed6533267c1c20c39aaaaa5","comment_count":0},"url":"https://api.github.com/repos/golang/go/commits/c57054f7b49539ca4ed6533267c1c20c39aaaaa5","html_url":"https://github.com/golang/go/commit/c57054f7b49539ca4ed6533267c1c20c39aaaaa5","comments_url":"https://api.github.com/repos/golang/go/commits/c57054f7b49539ca4ed6533267c1c20c39aaaaa5/comments","author":{"login":"kballard","id":714,"avatar_url":"https://avatars.githubusercontent.com/u/714?v=3","gravatar_id":"","url":"https://api.github.com/users/kballard","html_url":"https://github.com/kballard","followers_url":"https://api.github.com/users/kballard/followers","following_url":"https://api.github.com/users/kballard/following{/other_user}","gists_url":"https://api.github.com/users/kballard/gists{/gist_id}","starred_url":"https://api.github.com/users/kballard/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/kballard/subscriptions","organizations_url":"https://api.github.com/users/kballard/orgs","repos_url":"https://api.github.com/users/kballard/repos","events_url":"https://api.github.com/users/kballard/events{/privacy}","received_events_url":"https://api.github.com/users/kballard/received_events","type":"User","site_admin":false},"committer":{"login":"rsc","id":104030,"avatar_url":"https://avatars.githubusercontent.com/u/104030?v=3","gravatar_id":"","url":"https://api.github.com/users/rsc","html_url":"https://github.com/rsc","followers_url":"https://api.github.com/users/rsc/followers","following_url":"https://api.github.com/users/rsc/following{/other_user}","gists_url":"https://api.github.com/users/rsc/gists{/gist_id}","starred_url":"https://api.github.com/users/rsc/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rsc/subscriptions","organizations_url":"https://api.github.com/users/rsc/orgs","repos_url":"https://api.github.com/users/rsc/repos","events_url":"https://api.github.com/users/rsc/events{/privacy}","received_events_url":"https://api.github.com/users/rsc/received_events","type":"User","site_admin":false},"parents":[{"sha":"022e3ae2659491e519d392e266acd86223a510f4","url":"https://api.github.com/repos/golang/go/commits/022e3ae2659491e519d392e266acd86223a510f4","html_url":"https://github.com/golang/go/commit/022e3ae2659491e519d392e266acd86223a510f4"}],"stats":{"total":6,"additions":6,"deletions":0},"files":[{"sha":"47d790db41745fbd1f4e27733f4f933e3b2f12d2","filename":"misc/emacs/go-mode.el","status":"modified","additions":6,"deletions":0,"changes":6,"blob_url":"https://github.com/golang/go/blob/c57054f7b49539ca4ed6533267c1c20c39aaaaa5/misc/emacs/go-mode.el","raw_url":"https://github.com/golang/go/raw/c57054f7b49539ca4ed6533267c1c20c39aaaaa5/misc/emacs/go-mode.el","contents_url":"https://api.github.com/repos/golang/go/contents/misc/emacs/go-mode.el?ref=c57054f7b49539ca4ed6533267c1c20c39aaaaa5","patch":"@@ -470,3 +470,9 @@ Useful for development work.\"\n   (go-mode))\n \n (provide 'go-mode)\n+\n+(defun gofmt ()\n+  \"Pipe the current buffer through the external tool `gofmt`.\"\n+  \n+  (interactive)\n+  (shell-command-on-region 1 (+ (buffer-size) 1) \"gofmt\" t t shell-command-default-error-buffer))"}]}

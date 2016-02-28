@@ -1,0 +1,33 @@
+GET /repos/golang/go/commits/30ef146819d031ccd875de806c4edad66366d4bc?access_token=token
+host: api.github.com
+accept: application/vnd.github.v3+json
+
+HTTP/1.1 200 OK
+server: GitHub.com
+date: Sun, 28 Feb 2016 20:38:46 GMT
+content-type: application/json; charset=utf-8
+content-length: 3623
+connection: close
+status: 200 OK
+x-ratelimit-limit: 5000
+x-ratelimit-remaining: 4812
+x-ratelimit-reset: 1456694697
+cache-control: private, max-age=60, s-maxage=60
+vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding
+etag: "e4f3a8c9136b1d1e16a25a720d0e8f92"
+last-modified: Mon, 17 Nov 2014 02:55:59 GMT
+x-oauth-scopes: public_repo
+x-accepted-oauth-scopes: 
+x-github-media-type: github.v3; format=json
+access-control-allow-credentials: true
+access-control-expose-headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+access-control-allow-origin: *
+content-security-policy: default-src 'none'
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-content-type-options: nosniff
+x-frame-options: deny
+x-xss-protection: 1; mode=block
+x-served-by: 13d09b732ebe76f892093130dc088652
+x-github-request-id: 4E320659:99AC:481BAAE:56D35AD6
+
+{"sha":"30ef146819d031ccd875de806c4edad66366d4bc","commit":{"author":{"name":"Andrew Gerrand","email":"adg@golang.org","date":"2014-11-17T02:55:59Z"},"committer":{"name":"Andrew Gerrand","email":"adg@golang.org","date":"2014-11-17T02:55:59Z"},"message":"[release-branch.go1.4] remove cmd/link from nacl test zip\n\nLGTM=dsymonds\nR=rsc, dsymonds\nCC=golang-codereviews\nhttps://golang.org/cl/179830043","tree":{"sha":"4830a1973d9966c38557728a630e09ee47242b66","url":"https://api.github.com/repos/golang/go/git/trees/4830a1973d9966c38557728a630e09ee47242b66"},"url":"https://api.github.com/repos/golang/go/git/commits/30ef146819d031ccd875de806c4edad66366d4bc","comment_count":0},"url":"https://api.github.com/repos/golang/go/commits/30ef146819d031ccd875de806c4edad66366d4bc","html_url":"https://github.com/golang/go/commit/30ef146819d031ccd875de806c4edad66366d4bc","comments_url":"https://api.github.com/repos/golang/go/commits/30ef146819d031ccd875de806c4edad66366d4bc/comments","author":{"login":"adg","id":8446613,"avatar_url":"https://avatars.githubusercontent.com/u/8446613?v=3","gravatar_id":"","url":"https://api.github.com/users/adg","html_url":"https://github.com/adg","followers_url":"https://api.github.com/users/adg/followers","following_url":"https://api.github.com/users/adg/following{/other_user}","gists_url":"https://api.github.com/users/adg/gists{/gist_id}","starred_url":"https://api.github.com/users/adg/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/adg/subscriptions","organizations_url":"https://api.github.com/users/adg/orgs","repos_url":"https://api.github.com/users/adg/repos","events_url":"https://api.github.com/users/adg/events{/privacy}","received_events_url":"https://api.github.com/users/adg/received_events","type":"User","site_admin":false},"committer":{"login":"adg","id":8446613,"avatar_url":"https://avatars.githubusercontent.com/u/8446613?v=3","gravatar_id":"","url":"https://api.github.com/users/adg","html_url":"https://github.com/adg","followers_url":"https://api.github.com/users/adg/followers","following_url":"https://api.github.com/users/adg/following{/other_user}","gists_url":"https://api.github.com/users/adg/gists{/gist_id}","starred_url":"https://api.github.com/users/adg/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/adg/subscriptions","organizations_url":"https://api.github.com/users/adg/orgs","repos_url":"https://api.github.com/users/adg/repos","events_url":"https://api.github.com/users/adg/events{/privacy}","received_events_url":"https://api.github.com/users/adg/received_events","type":"User","site_admin":false},"parents":[{"sha":"daf5d4147118ed3f7bd4526cccf94301ed2f5cbf","url":"https://api.github.com/repos/golang/go/commits/daf5d4147118ed3f7bd4526cccf94301ed2f5cbf","html_url":"https://github.com/golang/go/commit/daf5d4147118ed3f7bd4526cccf94301ed2f5cbf"}],"stats":{"total":3,"additions":0,"deletions":3},"files":[{"sha":"07d4a1db026af6ef471374d15e9586be83aab9df","filename":"misc/nacl/testzip.proto","status":"modified","additions":0,"deletions":3,"changes":3,"blob_url":"https://github.com/golang/go/blob/30ef146819d031ccd875de806c4edad66366d4bc/misc/nacl/testzip.proto","raw_url":"https://github.com/golang/go/raw/30ef146819d031ccd875de806c4edad66366d4bc/misc/nacl/testzip.proto","contents_url":"https://api.github.com/repos/golang/go/contents/misc/nacl/testzip.proto?ref=30ef146819d031ccd875de806c4edad66366d4bc","patch":"@@ -18,9 +18,6 @@ go\tsrc=..\n \t\t\t\tgofmt_test.go\n \t\t\t\ttestdata\n \t\t\t\t\t+\n-\t\t\tlink\n-\t\t\t\ttestdata\n-\t\t\t\t\t+\n \t\tarchive\n \t\t\ttar\n \t\t\t\ttestdata"}]}

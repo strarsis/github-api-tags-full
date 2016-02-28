@@ -1,0 +1,33 @@
+GET /repos/golang/go/commits/ede44c68a48ba579defa08d1df94b268c93ab8e3?access_token=token
+host: api.github.com
+accept: application/vnd.github.v3+json
+
+HTTP/1.1 200 OK
+server: GitHub.com
+date: Sun, 28 Feb 2016 20:37:06 GMT
+content-type: application/json; charset=utf-8
+content-length: 5095
+connection: close
+status: 200 OK
+x-ratelimit-limit: 5000
+x-ratelimit-remaining: 4839
+x-ratelimit-reset: 1456694697
+cache-control: private, max-age=60, s-maxage=60
+vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding
+etag: "b8eafea237dc78061f731a52fdc5ec52"
+last-modified: Wed, 02 Nov 2011 03:00:13 GMT
+x-oauth-scopes: public_repo
+x-accepted-oauth-scopes: 
+x-github-media-type: github.v3; format=json
+access-control-allow-credentials: true
+access-control-expose-headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+access-control-allow-origin: *
+content-security-policy: default-src 'none'
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-content-type-options: nosniff
+x-frame-options: deny
+x-xss-protection: 1; mode=block
+x-served-by: b0ef53392caa42315c6206737946d931
+x-github-request-id: 4E320659:3F85:1180FF1:56D35A72
+
+{"sha":"ede44c68a48ba579defa08d1df94b268c93ab8e3","commit":{"author":{"name":"Andrew Gerrand","email":"adg@golang.org","date":"2011-11-02T03:00:13Z"},"committer":{"name":"Andrew Gerrand","email":"adg@golang.org","date":"2011-11-02T03:00:13Z"},"message":"weekly.2011-11-02\n\nR=golang-dev, bradfitz, rsc\nCC=golang-dev\nhttps://golang.org/cl/5308077","tree":{"sha":"26545c6f6727f85816f7472555789355578be4fa","url":"https://api.github.com/repos/golang/go/git/trees/26545c6f6727f85816f7472555789355578be4fa"},"url":"https://api.github.com/repos/golang/go/git/commits/ede44c68a48ba579defa08d1df94b268c93ab8e3","comment_count":0},"url":"https://api.github.com/repos/golang/go/commits/ede44c68a48ba579defa08d1df94b268c93ab8e3","html_url":"https://github.com/golang/go/commit/ede44c68a48ba579defa08d1df94b268c93ab8e3","comments_url":"https://api.github.com/repos/golang/go/commits/ede44c68a48ba579defa08d1df94b268c93ab8e3/comments","author":{"login":"adg","id":8446613,"avatar_url":"https://avatars.githubusercontent.com/u/8446613?v=3","gravatar_id":"","url":"https://api.github.com/users/adg","html_url":"https://github.com/adg","followers_url":"https://api.github.com/users/adg/followers","following_url":"https://api.github.com/users/adg/following{/other_user}","gists_url":"https://api.github.com/users/adg/gists{/gist_id}","starred_url":"https://api.github.com/users/adg/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/adg/subscriptions","organizations_url":"https://api.github.com/users/adg/orgs","repos_url":"https://api.github.com/users/adg/repos","events_url":"https://api.github.com/users/adg/events{/privacy}","received_events_url":"https://api.github.com/users/adg/received_events","type":"User","site_admin":false},"committer":{"login":"adg","id":8446613,"avatar_url":"https://avatars.githubusercontent.com/u/8446613?v=3","gravatar_id":"","url":"https://api.github.com/users/adg","html_url":"https://github.com/adg","followers_url":"https://api.github.com/users/adg/followers","following_url":"https://api.github.com/users/adg/following{/other_user}","gists_url":"https://api.github.com/users/adg/gists{/gist_id}","starred_url":"https://api.github.com/users/adg/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/adg/subscriptions","organizations_url":"https://api.github.com/users/adg/orgs","repos_url":"https://api.github.com/users/adg/repos","events_url":"https://api.github.com/users/adg/events{/privacy}","received_events_url":"https://api.github.com/users/adg/received_events","type":"User","site_admin":false},"parents":[{"sha":"492098eb759bba2ff5c86b0a868158afe32e91f8","url":"https://api.github.com/repos/golang/go/commits/492098eb759bba2ff5c86b0a868158afe32e91f8","html_url":"https://github.com/golang/go/commit/492098eb759bba2ff5c86b0a868158afe32e91f8"}],"stats":{"total":21,"additions":20,"deletions":1},"files":[{"sha":"bd244318ca58cf87006e744304c9ff4e3eeb994a","filename":".hgtags","status":"modified","additions":0,"deletions":1,"changes":1,"blob_url":"https://github.com/golang/go/blob/ede44c68a48ba579defa08d1df94b268c93ab8e3/.hgtags","raw_url":"https://github.com/golang/go/raw/ede44c68a48ba579defa08d1df94b268c93ab8e3/.hgtags","contents_url":"https://api.github.com/repos/golang/go/contents/.hgtags?ref=ede44c68a48ba579defa08d1df94b268c93ab8e3","patch":"@@ -91,4 +91,3 @@ acaddf1cea75c059d19b20dbef35b20fb3f38954 release.r58.2\n 941b8015061a0f6480954821dd589c60dfe35ed1 weekly.2011-10-25\n 7c1f789e6efd153951e85e3f28722fc69efc2af2 weekly.2011-10-26\n e69e528f2afc25a8334cfb9359fa4fcdf2a934b6 weekly.2011-11-01\n-e69e528f2afc25a8334cfb9359fa4fcdf2a934b6 weekly"},{"sha":"52e622851f180ae6dd1fa91dd5baf2c50cb78b8c","filename":"doc/devel/weekly.html","status":"modified","additions":20,"deletions":0,"changes":20,"blob_url":"https://github.com/golang/go/blob/ede44c68a48ba579defa08d1df94b268c93ab8e3/doc/devel/weekly.html","raw_url":"https://github.com/golang/go/raw/ede44c68a48ba579defa08d1df94b268c93ab8e3/doc/devel/weekly.html","contents_url":"https://api.github.com/repos/golang/go/contents/doc/devel/weekly.html?ref=ede44c68a48ba579defa08d1df94b268c93ab8e3","patch":"@@ -14,6 +14,26 @@\n hg update weekly.<i>YYYY-MM-DD</i>\n </pre>\n \n+<h2 id=\"2011-11-02\">2011-11-02 (new error type)</h2>\n+\n+<pre>\n+This snapshot introduces the built-in error type, defined as\n+\n+       type error interface {\n+               Error() string\n+       }\n+\n+The error type replaces os.Error. Notice that the method name has changed from\n+String to Error. Package fmt's Print formats both Stringers and errors:\n+in general there is no need to implement both String and Error methods.\n+\n+Gofix can update most code. If you have split your package across many files,\n+it may help to use the -force=error command-line option, which forces gofix to\n+apply the error fix even if it is not obvious that a particular file needs it.\n+As always, it is a good idea to read and test the changes that gofix made\n+before committing them to your version control system.\n+</pre>\n+\n <h2 id=\"2011-11-01\">2011-11-01</h2>\n \n <pre>"}]}

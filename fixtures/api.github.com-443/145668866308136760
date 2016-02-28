@@ -1,0 +1,33 @@
+GET /repos/golang/go/commits/659f1f208af02a3dd5cc13da0d4f8756a3cc5369?access_token=token
+host: api.github.com
+accept: application/vnd.github.v3+json
+
+HTTP/1.1 200 OK
+server: GitHub.com
+date: Sun, 28 Feb 2016 20:37:12 GMT
+content-type: application/json; charset=utf-8
+content-length: 4929
+connection: close
+status: 200 OK
+x-ratelimit-limit: 5000
+x-ratelimit-remaining: 4835
+x-ratelimit-reset: 1456694697
+cache-control: private, max-age=60, s-maxage=60
+vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding
+etag: "66a40903f84f5f1315de3d6f0f4ebc8f"
+last-modified: Wed, 26 Oct 2011 05:47:38 GMT
+x-oauth-scopes: public_repo
+x-accepted-oauth-scopes: 
+x-github-media-type: github.v3; format=json
+access-control-allow-credentials: true
+access-control-expose-headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+access-control-allow-origin: *
+content-security-policy: default-src 'none'
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-content-type-options: nosniff
+x-frame-options: deny
+x-xss-protection: 1; mode=block
+x-served-by: 2d7a5e35115884240089368322196939
+x-github-request-id: 4E320659:3F84:D0C2CB:56D35A78
+
+{"sha":"659f1f208af02a3dd5cc13da0d4f8756a3cc5369","commit":{"author":{"name":"Andrew Gerrand","email":"adg@golang.org","date":"2011-10-26T05:47:38Z"},"committer":{"name":"Andrew Gerrand","email":"adg@golang.org","date":"2011-10-26T05:47:38Z"},"message":"weekly.2011-10-26 (new rune type)\n\nR=rsc\nCC=golang-dev\nhttps://golang.org/cl/5297062","tree":{"sha":"0e9941970b3a5764c3a14af450006dce72497d6b","url":"https://api.github.com/repos/golang/go/git/trees/0e9941970b3a5764c3a14af450006dce72497d6b"},"url":"https://api.github.com/repos/golang/go/git/commits/659f1f208af02a3dd5cc13da0d4f8756a3cc5369","comment_count":0},"url":"https://api.github.com/repos/golang/go/commits/659f1f208af02a3dd5cc13da0d4f8756a3cc5369","html_url":"https://github.com/golang/go/commit/659f1f208af02a3dd5cc13da0d4f8756a3cc5369","comments_url":"https://api.github.com/repos/golang/go/commits/659f1f208af02a3dd5cc13da0d4f8756a3cc5369/comments","author":{"login":"adg","id":8446613,"avatar_url":"https://avatars.githubusercontent.com/u/8446613?v=3","gravatar_id":"","url":"https://api.github.com/users/adg","html_url":"https://github.com/adg","followers_url":"https://api.github.com/users/adg/followers","following_url":"https://api.github.com/users/adg/following{/other_user}","gists_url":"https://api.github.com/users/adg/gists{/gist_id}","starred_url":"https://api.github.com/users/adg/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/adg/subscriptions","organizations_url":"https://api.github.com/users/adg/orgs","repos_url":"https://api.github.com/users/adg/repos","events_url":"https://api.github.com/users/adg/events{/privacy}","received_events_url":"https://api.github.com/users/adg/received_events","type":"User","site_admin":false},"committer":{"login":"adg","id":8446613,"avatar_url":"https://avatars.githubusercontent.com/u/8446613?v=3","gravatar_id":"","url":"https://api.github.com/users/adg","html_url":"https://github.com/adg","followers_url":"https://api.github.com/users/adg/followers","following_url":"https://api.github.com/users/adg/following{/other_user}","gists_url":"https://api.github.com/users/adg/gists{/gist_id}","starred_url":"https://api.github.com/users/adg/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/adg/subscriptions","organizations_url":"https://api.github.com/users/adg/orgs","repos_url":"https://api.github.com/users/adg/repos","events_url":"https://api.github.com/users/adg/events{/privacy}","received_events_url":"https://api.github.com/users/adg/received_events","type":"User","site_admin":false},"parents":[{"sha":"c945f77f41fc69b652dc359e52a32f031ca5c730","url":"https://api.github.com/repos/golang/go/commits/c945f77f41fc69b652dc359e52a32f031ca5c730","html_url":"https://github.com/golang/go/commit/c945f77f41fc69b652dc359e52a32f031ca5c730"}],"stats":{"total":21,"additions":20,"deletions":1},"files":[{"sha":"8a8ca9d177ec7da6be26601104ce7ee14b5de3fe","filename":".hgtags","status":"modified","additions":0,"deletions":1,"changes":1,"blob_url":"https://github.com/golang/go/blob/659f1f208af02a3dd5cc13da0d4f8756a3cc5369/.hgtags","raw_url":"https://github.com/golang/go/raw/659f1f208af02a3dd5cc13da0d4f8756a3cc5369/.hgtags","contents_url":"https://api.github.com/repos/golang/go/contents/.hgtags?ref=659f1f208af02a3dd5cc13da0d4f8756a3cc5369","patch":"@@ -89,4 +89,3 @@ c1702f36df0397c19fc333571a771666029aa37e release\n acaddf1cea75c059d19b20dbef35b20fb3f38954 release.r58.2\n 6d7136d74b656ba6e1194853a9486375005227ef weekly.2011-10-18\n 941b8015061a0f6480954821dd589c60dfe35ed1 weekly.2011-10-25\n-941b8015061a0f6480954821dd589c60dfe35ed1 weekly"},{"sha":"2eb49751874b2a980943c0b2982fc2c79a8e3c32","filename":"doc/devel/weekly.html","status":"modified","additions":20,"deletions":0,"changes":20,"blob_url":"https://github.com/golang/go/blob/659f1f208af02a3dd5cc13da0d4f8756a3cc5369/doc/devel/weekly.html","raw_url":"https://github.com/golang/go/raw/659f1f208af02a3dd5cc13da0d4f8756a3cc5369/doc/devel/weekly.html","contents_url":"https://api.github.com/repos/golang/go/contents/doc/devel/weekly.html?ref=659f1f208af02a3dd5cc13da0d4f8756a3cc5369","patch":"@@ -14,6 +14,26 @@\n hg update weekly.<i>YYYY-MM-DD</i>\n </pre>\n \n+<h2 id=\"2011-10-26\">2011-10-26 (new rune type)</h2>\n+\n+<pre>\n+This snapshot introduces the rune type, an alias for int that\n+should be used for Unicode code points.\n+\n+A future release of Go (after Go 1) will change rune to be an\n+alias for int32 instead of int.  Using rune consistently is the way\n+to make your code build both before and after this change.\n+\n+To test your code for rune safety, you can rebuild the Go tree with\n+\n+\tGOEXPERIMENT=rune32 ./all.bash\n+\n+which builds a compiler in which rune is an alias for int32 instead of int.\n+\n+Also, run govet on your code to identify methods that might need to have their\n+signatures updated.\n+</pre>\n+\n <h2 id=\"2011-10-25\">2011-10-25</h2>\n \n <pre>"}]}

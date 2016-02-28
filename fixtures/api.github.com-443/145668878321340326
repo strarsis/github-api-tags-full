@@ -1,0 +1,33 @@
+GET /repos/golang/go/commits/7ff8e90eb7ceb2016aa9fc736febd8a5902ec65e?access_token=token
+host: api.github.com
+accept: application/vnd.github.v3+json
+
+HTTP/1.1 200 OK
+server: GitHub.com
+date: Sun, 28 Feb 2016 20:39:12 GMT
+content-type: application/json; charset=utf-8
+content-length: 3983
+connection: close
+status: 200 OK
+x-ratelimit-limit: 5000
+x-ratelimit-remaining: 4794
+x-ratelimit-reset: 1456694697
+cache-control: private, max-age=60, s-maxage=60
+vary: Accept, Authorization, Cookie, X-GitHub-OTP, Accept-Encoding
+etag: "b35df1af127e0b48b03b4c6117c96374"
+last-modified: Tue, 22 Apr 2014 00:00:27 GMT
+x-oauth-scopes: public_repo
+x-accepted-oauth-scopes: 
+x-github-media-type: github.v3; format=json
+access-control-allow-credentials: true
+access-control-expose-headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+access-control-allow-origin: *
+content-security-policy: default-src 'none'
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-content-type-options: nosniff
+x-frame-options: deny
+x-xss-protection: 1; mode=block
+x-served-by: 2d7a5e35115884240089368322196939
+x-github-request-id: 4E320659:3F80:448B5F:56D35AF0
+
+{"sha":"7ff8e90eb7ceb2016aa9fc736febd8a5902ec65e","commit":{"author":{"name":"Rui Ueyama","email":"ruiu@google.com","date":"2014-04-22T00:00:27Z"},"committer":{"name":"Ian Lance Taylor","email":"iant@golang.org","date":"2014-04-22T00:00:27Z"},"message":"strings: fix off-by-one error in test\n\nPreviously it would panic because of out-of-bound access\nif s1 is longer than s2.\n\nLGTM=iant\nR=golang-codereviews, iant\nCC=golang-codereviews\nhttps://golang.org/cl/90110043","tree":{"sha":"e5a384568d92c7959f0f328c4a93edc673407d27","url":"https://api.github.com/repos/golang/go/git/trees/e5a384568d92c7959f0f328c4a93edc673407d27"},"url":"https://api.github.com/repos/golang/go/git/commits/7ff8e90eb7ceb2016aa9fc736febd8a5902ec65e","comment_count":0},"url":"https://api.github.com/repos/golang/go/commits/7ff8e90eb7ceb2016aa9fc736febd8a5902ec65e","html_url":"https://github.com/golang/go/commit/7ff8e90eb7ceb2016aa9fc736febd8a5902ec65e","comments_url":"https://api.github.com/repos/golang/go/commits/7ff8e90eb7ceb2016aa9fc736febd8a5902ec65e/comments","author":{"login":"rui314","id":47400,"avatar_url":"https://avatars.githubusercontent.com/u/47400?v=3","gravatar_id":"","url":"https://api.github.com/users/rui314","html_url":"https://github.com/rui314","followers_url":"https://api.github.com/users/rui314/followers","following_url":"https://api.github.com/users/rui314/following{/other_user}","gists_url":"https://api.github.com/users/rui314/gists{/gist_id}","starred_url":"https://api.github.com/users/rui314/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/rui314/subscriptions","organizations_url":"https://api.github.com/users/rui314/orgs","repos_url":"https://api.github.com/users/rui314/repos","events_url":"https://api.github.com/users/rui314/events{/privacy}","received_events_url":"https://api.github.com/users/rui314/received_events","type":"User","site_admin":false},"committer":{"login":"ianlancetaylor","id":3194333,"avatar_url":"https://avatars.githubusercontent.com/u/3194333?v=3","gravatar_id":"","url":"https://api.github.com/users/ianlancetaylor","html_url":"https://github.com/ianlancetaylor","followers_url":"https://api.github.com/users/ianlancetaylor/followers","following_url":"https://api.github.com/users/ianlancetaylor/following{/other_user}","gists_url":"https://api.github.com/users/ianlancetaylor/gists{/gist_id}","starred_url":"https://api.github.com/users/ianlancetaylor/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ianlancetaylor/subscriptions","organizations_url":"https://api.github.com/users/ianlancetaylor/orgs","repos_url":"https://api.github.com/users/ianlancetaylor/repos","events_url":"https://api.github.com/users/ianlancetaylor/events{/privacy}","received_events_url":"https://api.github.com/users/ianlancetaylor/received_events","type":"User","site_admin":false},"parents":[{"sha":"2653386ce8dfd497fb9b8f65bc75ef9adf8e7b58","url":"https://api.github.com/repos/golang/go/commits/2653386ce8dfd497fb9b8f65bc75ef9adf8e7b58","html_url":"https://github.com/golang/go/commit/2653386ce8dfd497fb9b8f65bc75ef9adf8e7b58"}],"stats":{"total":2,"additions":1,"deletions":1},"files":[{"sha":"95a42019a3f0d46d93eec006449acf9fa4ce0d72","filename":"src/pkg/strings/strings_test.go","status":"modified","additions":1,"deletions":1,"changes":2,"blob_url":"https://github.com/golang/go/blob/7ff8e90eb7ceb2016aa9fc736febd8a5902ec65e/src/pkg/strings/strings_test.go","raw_url":"https://github.com/golang/go/raw/7ff8e90eb7ceb2016aa9fc736febd8a5902ec65e/src/pkg/strings/strings_test.go","contents_url":"https://api.github.com/repos/golang/go/contents/src/pkg/strings/strings_test.go?ref=7ff8e90eb7ceb2016aa9fc736febd8a5902ec65e","patch":"@@ -652,7 +652,7 @@ func equal(m string, s1, s2 string, t *testing.T) bool {\n \te1 := Split(s1, \"\")\n \te2 := Split(s2, \"\")\n \tfor i, c1 := range e1 {\n-\t\tif i > len(e2) {\n+\t\tif i >= len(e2) {\n \t\t\tbreak\n \t\t}\n \t\tr1, _ := utf8.DecodeRuneInString(c1)"}]}
