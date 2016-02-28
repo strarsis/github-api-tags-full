@@ -1,7 +1,8 @@
 var GitHubApi     = require('github'),
     GithubApiTags = require('./'),
     ProgressBar   = require('progress'),
-    moment        = require('moment');
+    moment        = require('moment'),
+    replay        = require('replay');
 
 var repoId = {
   'user': 'golang',
