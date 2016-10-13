@@ -40,8 +40,13 @@ var GithubTags   = function() {
 };
 
 var getLastPageNo = function(page) {
-  var lastPageUrl = parseLinks(page.tags.meta.link).last;
-  var lastPageNo  = url.parse(lastPageUrl, true).query.page;
+  var lastPageUrl;
+  var lastPageNo = page.no;
+  if (typeof(page.tags.meta.link) !== 'undefined') {
+    lastPageUrl = parseLinks(page.tags.meta.link).last;
+    lastPageNo  = url.parse(lastPageUrl, true).query.page;
+  }
+  
   return lastPageNo;
 };
 
