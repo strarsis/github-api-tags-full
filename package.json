@@ -6,7 +6,7 @@
     "parse-links": "^0.1.0"
   },
   "name": "github-api-tags-full",
-  "version": "7.0.1",
+  "version": "7.1.0",
   "description": "Gets all tags with their respective commit for sorting from Github API",
   "main": "index.js",
   "devDependencies": {
