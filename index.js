@@ -42,7 +42,7 @@ var GithubTags   = function() {
 var getLastPageNo = function(page) {
   var lastPageUrl;
   var lastPageNo = page.no;
-  if (typeof(page.tags.meta.link) !== 'undefined') {
+  if (typeof(page.tags.meta.link) !== 'undefined') { // in case this is the only page and no further pages
     lastPageUrl = parseLinks(page.tags.meta.link).last;
     lastPageNo  = url.parse(lastPageUrl, true).query.page;
   }
